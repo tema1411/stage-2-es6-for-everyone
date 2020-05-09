@@ -27,15 +27,15 @@ function createFighter(fighter, selectFighter) {
 
 function createImage(fighter) {
   const { source, name } = fighter;
-  const attributes = { 
+  const attributes = {
     src: source,
     title: name,
-    alt: name, 
+    alt: name,
   };
   const imgElement = createElement({
     tagName: 'img',
     className: 'fighter___fighter-image',
-    attributes
+    attributes,
   });
 
   return imgElement;
