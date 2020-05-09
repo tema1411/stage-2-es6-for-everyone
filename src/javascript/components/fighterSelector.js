@@ -13,7 +13,6 @@ export function createFightersSelector() {
     const firstFighter = playerOne ?? fighter;
     const secondFighter = Boolean(playerOne) ? playerTwo ?? fighter : playerTwo;
     selectedFighters = [firstFighter, secondFighter];
-
     renderSelectedFighters(selectedFighters);
   };
 }

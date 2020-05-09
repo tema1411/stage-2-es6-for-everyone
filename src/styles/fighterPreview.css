@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   flex-basis: 250px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .fighter-preview___right {
@@ -11,3 +13,29 @@
 .fighter-preview___left {
   align-items: flex-start;
 }
+
+.fighter-preview___img {
+  height: 320px;
+  object-fit: contain;
+  object-position: bottom;
+  margin: 0 auto;
+}
+
+.fighter-preview___right .fighter-preview___img {
+  transform: rotateY(180deg);
+}
+
+.fighter-preview___rows {
+  padding: 10px;
+  width: 100%;
+  background-color: #ba0303;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #f8f9f4;
+  box-shadow: 6px 6px 7px 0 rgba(0, 0, 0, 0.75)
+}
+
+.fighter-preview___data {
+  text-transform: capitalize;
+}
+
