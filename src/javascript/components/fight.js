@@ -8,7 +8,7 @@ class PlayerControl {
     attackBtnKey,
     blockAttackBtnKey,
     criticalAttackKey,
-    getWinnerFighter,
+    getWinnerFighterCallback,
     selectorHealthIndicator,
   }) {
     this.health = attackerFighter.health;
@@ -26,7 +26,7 @@ class PlayerControl {
     this.defendingPlayerControl = null;
 
     this.pressed = new Set();
-    this.getWinnerFighter = getWinnerFighter;
+    this.getWinnerFighter = getWinnerFighterCallback;
 
     this._controlHit = this._controlHit.bind(this);
     this._deletePressedKey = this._deletePressedKey.bind(this);
@@ -152,7 +152,7 @@ export async function fight(firstFighter, secondFighter) {
       attackBtnKey: PlayerOneAttack,
       blockAttackBtnKey: PlayerOneBlock,
       criticalAttackKey: PlayerOneCriticalHitCombination,
-      getWinnerFighter: resolve,
+      getWinnerFighterCallback: resolve,
       selectorHealthIndicator: 'left-fighter-indicator',
     });
 
@@ -162,7 +162,7 @@ export async function fight(firstFighter, secondFighter) {
       attackBtnKey: PlayerTwoAttack,
       blockAttackBtnKey: PlayerTwoBlock,
       criticalAttackKey: PlayerTwoCriticalHitCombination,
-      getWinnerFighter: resolve,
+      getWinnerFighterCallback: resolve,
       selectorHealthIndicator: 'right-fighter-indicator',
     });
 
