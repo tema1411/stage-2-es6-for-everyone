@@ -12,6 +12,7 @@ export async function renderArena(selectedFighters) {
   // - start the fight
   // - when fight is finished show winner
   const winnerFighter = await fight(...selectedFighters);
+  console.log('winnerFighter', winnerFighter);
 }
 
 function createArena(selectedFighters) {
